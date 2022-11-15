@@ -11841,3 +11841,8 @@ html {
   box-shadow: 2px 1px #212529;
   border-color: #212529;
 }
+
+.harga {
+  color: green;
+  font-size: 20px;
+}
