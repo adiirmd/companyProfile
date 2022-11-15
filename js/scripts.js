@@ -47,3 +47,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 });
+
+//Contact form js
+const scriptURL = "https://script.google.com/macros/s/AKfycbxsCrAiGn99zgKfAdcKP4jF8QdTsPB81g-burx6mwndLD8oXZzBwgT1cLoIdbO4HWtX/exec";
+const form = document.forms["contact-form"];
+const btnKirim = document.querySelector(".btn-kirim");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  //submit button
+  btnLoading.classList.toggle("d-none");
+  btnKirim.classList.toggle("d-none");
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      btnLoading.classList.toggle("d-none");
+      btnKirim.classList.toggle("d-none");
+      //alert
+      myAlert.classList.toggle("d-none");
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+  //form reset
+  form.reset();
+});

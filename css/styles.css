@@ -11730,7 +11730,7 @@ html {
 
 .masthead {
   padding-top: calc(6rem + 74px);
-  padding-bottom: 18rem;
+  padding-bottom: 22rem;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -11746,7 +11746,7 @@ html {
 @media (min-width: 992px) {
   .masthead {
     padding-top: calc(6rem + 25px);
-    padding-bottom: 6rem;
+    padding-bottom: 12rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
@@ -11809,7 +11809,7 @@ html {
 
 #about {
   padding-top: calc(7rem + 50px);
-  padding-bottom: 15rem;
+  padding-bottom: 18rem;
 }
 
 /*css3 design scrollbar*/
@@ -11845,4 +11845,8 @@ html {
 .harga {
   color: green;
   font-size: 20px;
+}
+
+.fa-cart-shopping {
+  margin-right: 3px;
 }
